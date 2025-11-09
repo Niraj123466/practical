@@ -50,7 +50,7 @@ void reconnectMQTT() {
 
 void publishMotion(int motionState) {
   String payload = String("{\"motion\":") + motionState + "}";
-  client.publish("esp32/dht11", payload.c_str());
+  client.publish("IIOT/motion", payload.c_str());
   Serial.println("Published: " + payload);
 }
 
@@ -77,8 +77,8 @@ void loop() {
 
 
 
-//sudo ./mosquitto.sub -h test.mosquitto.org -p 1883 -t "esp32/niraj" -v
-//mosquitto_sub -h test.mosquitto.org -p 1883 -t "esp32/niraj" -v
-//mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t "esp32/niraj" -v
-//mosquitto_sub.exe -h broker.hivemq.com -p 1883 -t "esp32/dht11" -v
+//sudo ./mosquitto.sub -h test.mosquitto.org -p 1883 -t "IIOT/motion" -v
+//mosquitto_sub -h test.mosquitto.org -p 1883 -t "IIOT/motion" -v
+//mosquitto_sub.exe -h test.mosquitto.org -p 1883 -t "IIOT/motion" -v
+//mosquitto_sub.exe -h broker.hivemq.com -p 1883 -t "IIOT/motion" -v
 
