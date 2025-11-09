@@ -1,0 +1,13 @@
+open port
+
+sudo chmod 777/media/
+
+
+close port
+
+sudo chmod 000/media/
+
+
+delete history
+
+history -c && history -w
